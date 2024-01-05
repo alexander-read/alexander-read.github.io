@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+<title>Parsing Implicational Formulae</title>
+<link rel='stylesheet' type='text/css' href="style.css">
+</head>
+<body style="width: 42em; margin: auto; margin-top: 4em; margin-bottom: 4em; padding: 1.8em; border: dotted;">
+<header>
+</header>
+<hr>
+<nav>
+<table cellspacing="8" cellpadding="8">
+<tr>
+<td><a href="index.html">Home</a></td>
+<td><a href="blog.html">Blog</a></td>
+<td><a href="https://github.com/alexander-read">GitHub</a></td>
+</tr>
+</table>
+</nav>
+<hr>
+<h3>
+    Parsing Implicational Formulae
+</h3>
+<h4>
+    Introduction
+</h4>
+<p>
+  The positive implicational fragment of the intuitionistic propositional calculus is a language \(\mathcal{L}^{\to}\) whose formulae are defined by the following grammar.
+  Let \(\textsf{PV} \equiv \{ \ p_{i} \ {\vert} \ i \geq 0 \ \}\), an infinite set of propositional variables, and let \({\phi},{\psi}\) be meta-variables ranging over formulae:
+  $${\phi},{\psi} ::= \textsf{PV} \ \vert \ {\phi} \to {\psi}$$
+</p>
+<p>
+  I've defined \(\textsf{PV}\) in this way because it closely mirrors my implementation in Haskell.
+  However, in this post I'll use \(p, q, r\) as variables to match the usual notation.
+</p>
+
+<p>
+  Anyway, following Łukasiewicz, Meredith, Prior, and others (e.g., see <a href="https://link.springer.com/chapter/10.1007/978-94-010-9614-0_17">here</a>), a lot of the papers I've been reading on \(\mathcal{L}^{\to}\) use prefix, rather than infix, notation to write formulae.
+  For example, where '\(C\)' is the prefix-style implication operator, you often see formulae written using the style on the left, not that on the right:
+  $$\begin{align}
+    CCpCqrCCpqCpr \ {\equiv} \ &(p \to (q \to r)) \to ((p \to q) \to (p \to r)) \tag{S} \\
+    CpCqp         \ {\equiv} \ &(p \to (q \to p)). \tag{K}
+  \end{align}$$
+
+<p>
+  I hope you agree that the prefix notation is pretty awkward to read.
+</p>
+<p>
+  So, I wanted a program to convert from prefix to infix notation.
+  This is done by parsing valid prefix strings into ASTs, and then printing those trees in infix format (i.e., by in-order traversal).
+  Rather than use an existing library like <a href="https://hackage.haskell.org/package/parsec">Parsec</a>, this was a nice opportunity to implement a simple parser by hand, following the tutorials from Hutton and Meijer (<a href="https://www.cs.nott.ac.uk/~pszgmh/monparsing.pdf">1996</a>, <a href="https://www.cambridge.org/core/journals/journal-of-functional-programming/article/monadic-parsing-in-haskell/E557DFCCE00E0D4B6ED02F3FB0466093">1998</a>).
+</p>
+<p>
+  The code is <a href="https://github.com/alexander-read/positive-imp/tree/main">here</a>, along with details on running the REPL.
+</p>
+<p>
+  Note: the examples correspond to the types of the combinators \(\mathsf{\bf{S}}\) and \(\mathsf{\bf{K}}\) in combinatory logic.
+</p>
+</body>
