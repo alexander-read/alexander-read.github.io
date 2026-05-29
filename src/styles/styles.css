@@ -1,0 +1,129 @@
+:root {
+    --main-highlight: #2962FF;
+}
+
+body {
+    font-family: "Roboto", Inter, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    line-height: 1.625rem;
+    font-size: 1.125rem;
+    letter-spacing: .01rem;
+}
+
+::selection {
+    background: var(--main-highlight);
+    color: #FAFAFA;
+}
+
+.main-content {
+    padding: 1rem;
+    text-align: justify;
+    max-width: 44rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-tab {
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    border-left: 2px solid var(--main-highlight);
+    padding-left: 20px;
+}
+
+.navTab,
+.navGithub {
+    color: #303030;
+    border-radius: 4px;
+    padding: 10px 16px;
+    width: 90px;
+    margin: 0 4px;
+    font-size: 14px;
+}
+
+.navGithub {
+    padding: 6px 16px;
+}
+
+.navTab:hover {
+    cursor: pointer;
+}
+
+.navGithub:hover {
+    cursor: e-resize;
+}
+
+.navTab:hover,
+.navGithub:hover {
+    background-color: #484848 !important;
+    color: #FAFAFA !important;
+    text-decoration: none;
+}
+
+.navTabActive,
+.navTabActive:hover {
+    background-color: var(--main-highlight) !important;
+    color: #FAFAFA !important;
+    cursor: default;
+}
+
+.dateString {
+    font-family: monospace;
+    font-size: 0.85em;
+}
+
+.projectTitle {
+    color: #111111;
+    font-weight: 500;
+    text-decoration: none;
+    background-color: rgba(17, 17, 17, 0.1);
+    border-radius: 2px;
+    padding: 4px;
+    font-size: 0.95em;
+}
+
+.projectItem {
+    border-left: 2px solid var(--main-highlight);
+    padding-left: 20px;
+}
+
+.embeddedTitle,
+.notes-item {
+    border-left: 2px solid var(--main-highlight);
+    padding-left: 10px;
+}
+
+.notes-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4em;
+    padding-left: 1.2em;
+}
+
+.embeddedSeparator {
+    vertical-align: middle;
+    padding: 0 5px;
+    width: max-content;
+}
+
+.notes-title {
+    font-size: 0.9em;
+    text-decoration: none;
+    color: #111111;
+    font-weight: bold;
+}
+
+.embeddedLink {
+    color: var(--main-highlight);
+    text-decoration: none;
+}
+
+.embeddedLink:hover,
+.projectTitle:hover {
+    color: #FAFAFA;
+    background-color: var(--main-highlight);
+    text-decoration: none;
+}
+
+.projectDescription {
+    color: #212121;
+}
