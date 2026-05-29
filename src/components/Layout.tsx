@@ -12,13 +12,10 @@ export default function Layout() {
     const navigate: NavigateFunction = useNavigate()
     const { pathname } = useLocation()
 
-    // NOTE: how does `Outlet` work?
-    // See this style: https://oxide.computer/
     return (
         <Box style={{ backgroundColor: '#FAFAFA', minHeight: '100vh', fontSize: 18 }}>
             <Container size={840} style={{ padding: '1.5em', backgroundColor: '#FAFAFA', color: '#111111' }}>
                 {/* Sticky navbar */}
-                {/* NOTE: move to component */}
                 <Box
                     style={{
                         padding: '1em 0 0 0',
