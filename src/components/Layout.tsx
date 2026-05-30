@@ -13,7 +13,7 @@ export default function Layout() {
     const { pathname } = useLocation()
 
     return (
-        <Box style={{ backgroundColor: '#FAFAFA', minHeight: '100vh', fontSize: 18 }}>
+        <Box style={{ backgroundColor: '#FAFAFA', minHeight: '100vh', fontSize: '1.0625rem' }}>
             <Container size={840} style={{ padding: '1.5em', backgroundColor: '#FAFAFA', color: '#111111' }}>
                 {/* Sticky navbar */}
                 <Box

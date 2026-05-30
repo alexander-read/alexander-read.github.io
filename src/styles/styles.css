@@ -5,9 +5,8 @@
 body {
     font-family: "Roboto", Inter, Helvetica, Arial, sans-serif;
     font-weight: 400;
-    line-height: 1.625rem;
-    font-size: 1.125rem;
-    letter-spacing: .01rem;
+    line-height: 1.7rem;
+    font-size: 1.0625rem;
 }
 
 ::selection {
@@ -37,7 +36,8 @@ body {
     padding: 10px 16px;
     width: 90px;
     margin: 0 4px;
-    font-size: 14px;
+    font-size: 15px;
+    font-weight: 500;
 }
 
 .navGithub {

@@ -46,7 +46,7 @@ const PROJECTS: Project[] = [
 
 export default function Projects() {
     return (
-        <div style={{ textAlign: 'justify' }}>
+        <div>
             <Text mb="md">Here are some projects I'm working on:</Text>
             <List spacing="lg" listStyleType="none" pl={0}>
                 {PROJECTS.map(project => (

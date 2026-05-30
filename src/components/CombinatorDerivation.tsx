@@ -148,7 +148,7 @@ export default function CombinatorDerivation({ steps, description }: CombinatorD
                 display: 'inline-block',
                 background: THEME.bg,
                 fontFamily: "'JetBrains Mono', 'Courier New', monospace",
-                fontSize: '18px',
+                fontSize: '19px',
                 lineHeight: '1.8',
                 padding: '0 1.8em',
                 margin: 0,
